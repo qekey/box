@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <script src="js/jquery.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!--   <link href='http://fonts.useso.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>-->
+</head>
+<body>
+<div class="header">
+    <div class="header-left">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt=""></a>
+        </div>
+        <div class="top-nav">
+            <ul>
+                <li class="active"><a href="index.html">世界著名供应商</a></li>
+            </ul>
+        </div>
+        <ul class="social-in">
+            <li><a href="#"><i class="email"> </i></a></li>
+        </ul>
+    </div>
+    <div class="header-top">
+        <div class="logo-in">
+            <a href="index.html"><img src="images/logo.png" alt=""></a>
+        </div>
+    </div>
+      <div class="content">
+      	<%
+      		 mfses.forEach(function(item, index) {
+				%><div class="content-grid">
+            <a href="<%=item.url%>" class="b-link-stripe b-animate-go  thickbox">
+                <img src="<%=item.img%>"/> 
+                <div class="b-wrapper">
+                    <h2 class="b-animate b-from-left    b-delay03 ">
+                        <span><%=item.title%></span> 
+                        <p><%=item.info%></p>
+                        <i> </i>
+                    </h2>
+                </div>
+            </a>
+        </div>  
+				<%
+			})
+      	%>
+      	
+      
+
+    </div>
+    <div class="clear"></div>
+</div>
+</body>
+</html>
