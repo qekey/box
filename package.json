@@ -2,7 +2,7 @@
 	"name": "bae-nodejs",
 	"version": "1.0.0",
 	"author": "zuaa",
-	"node-main": "waterbear",
+	"node-main": "box",
 	"description": "网站功能使用率检测工具",
 	"scripts": {
 		"start": "node server.js"
@@ -11,21 +11,7 @@
 	"dependencies": {
 		"express": "3.4.2",
 		"ejs": "0.8.4",
-		"jade": "0.35.0",
-		"cheerio": "0.16.0",
-		"request": "2.36.0",
-		"async": "*",
-		"bufferhelper": "0.2.0",
-		"iconv-lite": "0.4.4" ,
-		"log": "*",
-		"hprose": "*"  ,
-		"mu2": "*",
-	  	"pg":"*",
-		"async":"*",
-		"mysql": "2.0.0-alpha9",
-		"transliteration":"*",
-		"moment":"*",
-		"cron":"*"
+		"jade": "0.35.0" 
 	},
 	"engines": {
 		"node": ">=0.10"
