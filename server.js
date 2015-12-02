@@ -8,14 +8,12 @@ var express = require('express')
 var app = express();
 var path = require('path');
 var c = require('./config/config');
-var log = eval("c.config." + c.config.config + ".log");
-var async = require('async');
-
-var ic360 = require('./model/ic360/main');
+var log = eval("c.config." + c.config.config + ".log"); 
+var box = require('./controler/box');
 
 //初始化定义
 app.configure(function() {
-	app.set('views', __dirname + '/ic_public');
+	app.set('views', __dirname + '/ejs_public');
 	app.use(express.bodyParser());
 	app.use(express.methodOverride());
 	app.use(express.cookieParser('waterbear'));
@@ -23,9 +21,9 @@ app.configure(function() {
 	app.use(app.router);
 	app.use(express.errorHandler());
 });
-app.use(express.static(path.join(__dirname, 'ic_public')));
+app.use(express.static(path.join(__dirname, 'public')));
 //app.use(express.static(path.join(__dirname, 'manager')));
-app.use(express.cookieParser('waterbearcookie'));
+app.use(express.cookieParser('box'));
 app.use(express.session({
 	cookie: {
 		maxAge: 2 * 60 * 1000
@@ -33,8 +31,9 @@ app.use(express.session({
 	secret: "waterbearsecretkey"
 }));
 
-try {
-	ic360(app);
+
+try { 
+	box(app);
 } catch (e) {
 	log.error(e);
 }
