@@ -12,23 +12,11 @@
     function hideURLbar() {
         window.scrollTo(0, 1);
     } </script>
-    <!--   <link href='http://fonts.useso.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>-->
-</head>
+ </head>
 <body>
 <div class="header">
-    <div class="header-left">
-        <div class="logo">
-            <a href="index.html"><img src="images/logo.png" alt=""></a>
-        </div>
-        <div class="top-nav">
-            <ul>
-                <li class="active"><a href="index.html">世界著名供应商</a></li>
-            </ul>
-        </div>
-        <ul class="social-in">
-            <li><a href="#"><i class="email"> </i></a></li>
-        </ul>
-    </div>
+	<%include header-left.ejs%>
+    
     <div class="header-top">
         <div class="logo-in">
             <a href="index.html"><img src="images/logo.png" alt=""></a>
@@ -51,10 +39,7 @@
         </div>  
 				<%
 			})
-      	%>
-      	
-      
-
+      	%> 
     </div>
     <div class="clear"></div>
 </div>
