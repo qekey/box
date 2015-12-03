@@ -22,23 +22,7 @@
         </div>
     </div>
       <div class="content">
-      	<%
-      		 mfses.forEach(function(item, index) {
-				%><div class="content-grid">
-            <a href="<%=item.url%>" class="b-link-stripe b-animate-go  thickbox">
-                <img src="<%=item.img%>"/> 
-                <div class="b-wrapper">
-                    <h2 class="b-animate b-from-left    b-delay03 ">
-                        <span><%=item.title%></span> 
-                        <p><%=item.info%></p>
-                        <i> </i>
-                    </h2>
-                </div>
-            </a>
-        </div>  
-				<%
-			})
-      	%> 
+      	<%=data%> 
     </div>
     <div class="clear"></div>
 </div>

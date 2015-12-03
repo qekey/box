@@ -10,7 +10,7 @@ var path = require('path');
 var c = require('./config/config');
 var log = eval("c.config." + c.config.config + ".log"); 
 var box = require('./controler/box');
-
+var markdown = require( "markdown" ).markdown;
 //初始化定义
 app.configure(function() {
 	app.set('views', __dirname + '/ejs_public');
@@ -37,5 +37,11 @@ try {
 } catch (e) {
 	log.error(e);
 }
+app.get('/markdown', function(request, response) {  
+	log.debug('hi markdown, i am here  %s.',app);
+	response.render('markdown.ejs', {"data": markdown.toHTML( "Hello *World*!" )});
+});
+
+
 app.listen(process.env.port || 18080);
 console.log(process.env.port || 18080);
