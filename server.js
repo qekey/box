@@ -39,7 +39,7 @@ try {
 }
 app.get('/markdown', function(request, response) {  
 	log.debug('hi markdown, i am here  %s.',app);
-	response.render('markdown.ejs', {"data": markdown.toHTML( "Hello *World*!" )});
+	response.send(markdown.toHTML( "Hello *World*!" ));
 });
 
 
