@@ -5,8 +5,9 @@ module.exports = function(app) {
 	 
 		app.get('/', function(request, response) {  
 			log.debug('hi /, i am here  %s.',app);
-			response.render('index.ejs', {"mfses":mfs.list});
+			response.render('niu88.ejs', {"mfses":mfs.list});
 		});
+
 		app.get('/updateLog', function(request, response) {  
 			log.debug('hi updateLog, i am here  %s.',app);
 			response.render('index.ejs', {"mfses":mfs.list});
