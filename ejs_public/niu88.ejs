@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>IC牛导航</title>
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="css/guideindex.css">
+<link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<script src="js/jquery-1.8.3.min.js"></script>	
+<script type="text/javascript" src="./js/index.js"></script>
+</head>
+<body>
+<div class="fixed js-header" id="header">
+    <div class="header">
+      <div class="containers">
+          <a href="/" class="logo" title="芯牛">
+            <span class="icon icon-logo"></span>
+          </a>
+          <ul class="nav-login">
+            <li><a href="/" class="login">登录</a></li>
+            <li><a href="/" class="login">注册</a></li>
+          </ul>
+          <div class="searchs">
+		    <div class="search_box">
+				<input  type="text" value="" class="">
+				<button type="submit" class="">搜索</button>
+			</div>
+          </div>
+           
+          <ul class="nav-link">
+            <li><a href="/">首页</a></li>
+            <li><a href="/">供应商</a></li>
+            <li><a href="/">分类</a></li>
+            <li><a href="/">库存管理</a></li>
+            <li><a href="/">客服</a></li>
+            <li><a href="/" target="_blank">关于</a></li>
+          </ul>
+      </div>
+    </div>
+</div>
+
+<div class="guide_list" style="margin-top:100px;">
+  <h3>交易平台</h3>
+  <div id="box">
+      <ul>
+          <%
+          mfses.forEach(function(item, index) {
+          %>
+          <li> <a href="<%=item.url%>"><%=item.title%></li>
+          <%
+          })
+          %>
+      </ul>
+  </div>        
+  <div style="clear:both;"></div>
+
+</div>
+
+<div style="clear:both;"></div>
+
+<div class="foot">
+	<div class="content">
+		<p>www.icniu.com<br>
+		页面所有信息以及版权均归芯牛所有
+		</p>
+	</div>
+</div>
+</body>
+</html>
