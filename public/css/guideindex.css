@@ -1,0 +1,36 @@
+
+.list_li{
+	display:inline;
+	line-height:24px;
+	width: 100px;
+	height:auto;
+	word-break:break-all;
+	word-wrap : break-word ;
+}
+.guide_list{
+	min-height: 500px;
+	width: 1200px;
+	margin-left:auto;
+	margin-right: auto;
+	margin-top: 30px;
+}
+#box {
+	width:auto;
+	height:auto;
+}
+#box ul {
+	margin:0px;
+	padding:0px;
+}
+#box li {
+	margin:2px;
+	padding:5px;
+	float:left;
+	width:145px;
+	height:38px;
+	line-height: 38px;
+	/* border:1px solid #26a9e1; */
+}
+#box li:hover{
+	background: #EBF1F3;
+}
