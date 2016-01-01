@@ -2,8 +2,11 @@ var c = require('../config/config');
 var log = eval("c.config." + c.config.config + ".log"); 
 var mfs = require('../data/mfs');
 module.exports = function(app) {
-	 
-		app.get('/', function(request, response) {  
+	 app.get('/', function(request, response) {  
+			log.debug('hi /, i am here  %s.',app);
+			response.render('index.ejs', {"mfses":mfs.list});
+		});
+		app.get('/index', function(request, response) {  
 			log.debug('hi /, i am here  %s.',app);
 			response.render('niu88.ejs', {"mfses":mfs.list});
 		});
@@ -20,4 +23,4 @@ module.exports = function(app) {
 			log.debug('hi caidana, i am here  %s.',app);
 			response.render('index.ejs', {"mfses":mfs.list});
 		}); 
-}
+};
