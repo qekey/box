@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>qegoo</title>
+    <%include head.ejs%>  
+</head>
+<body>
+    <%include top.ejs%>  
+        <div class="clearfix"></div>
+        <div class="content">
+        <ol class="breadcrumb">
+            <li><a href="/">首页</a></li>
+            <li><a href="#">料号搜索</a></li>
+            <li class="active"><%=k%>搜索结果</li>
+        </ol>
+    </div>
+    <div class="content" style="min-height:350px">
+    <%
+for (var i = 0; i < body.results.length; i++) {
+    var items =body.results[i] 
+    %>
+      <%include table.ejs%>
+    <%
+    }    %>
+    </div>
+    <div class="content center" style="margin-bottom:60px">
+   <!--      <nav>
+            <ul class="pagination">
+                <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+            </ul>
+        </nav> -->
+    </div>
+<%include footer.ejs%> 
+</body>
+
+</html>

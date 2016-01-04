@@ -1,0 +1,59 @@
+  <tr>
+                    <td>
+                        <a href="star" >
+                            <i class="fa fa-star auth-star"></i>
+                        </a>
+                    </td>
+                    <td><a href="<%=tr.seller.homepage_url%>"><%=tr.seller.name%></a></td>
+                    <td><%=tr.sku%></td>
+                    <td><%=tr.factory_lead_days!=null?tr.factory_lead_days:''%></td>
+                    <td><%=tr.in_stock_quantity!=null?tr.in_stock_quantity:''%></td>
+                    <td><%=tr.moq!=null?tr.moq:''%></td>
+                    <td><%=tr.packaging?tr.packaging:''%></td> 
+                    <td><%=tr.seller.display_flag?tr.seller.display_flag:''%></td>
+                      <%
+                var prices = tr.prices; 
+                var thisPrice=[];
+                console.log(prices,"prices")
+                for(var price in prices){ 
+	    		thisPrice.money=price;
+	    		thisPrice.price=prices[price]
+	    		//这里是所有的价格
+	    		if(thisPrice.price){ 
+                                    for (var i = thisPrice.price.length - 1; i >= 0; i--) {
+                                         //单个价格区间
+                                         var p1=  thisPrice.price[i]
+                                         var p=p1[0]
+ 	    				if(p==1){
+	    					thisPrice.p1=p1[1]
+                                                    thisPrice.p100=p1[1]
+                                                    thisPrice.p1000=p1[1]
+                                                    thisPrice.p10000=p1[1]
+	    				}else{
+	    					if(p<=100 && p>1){
+	    						thisPrice.p100=p1[1]
+                                                            thisPrice.p1000=p1[1]
+                                                            thisPrice.p10000=p1[1]
+	    					}else if(p>100 &&p<=1000){
+	    						thisPrice.p100=p1[1] 
+                                                            thisPrice.p10000=p1[1]
+	    					}else if(p>1000){
+	    						thisPrice.p10000=p1[1]
+	    					}
+	    				}	
+	    			}
+	    		}
+	    	} 
+                %>
+                    <td>
+                        *<%=thisPrice.money?thisPrice.money:''%>
+                    </td>
+                    <td><%=thisPrice.p1?thisPrice.p1:''%></td>
+                    <td><%=thisPrice.p100?thisPrice.p100:''%></td>
+                    <td><%=thisPrice.p1000?thisPrice.p1000:''%></td>
+                    <td><%=thisPrice.p10000?thisPrice.p10000:''%></td>
+                    <td>
+                        <div qq="1877550456" onclick="window.open('http://wpa.qq.com/msgrd?v=3&amp;uin=1877550456&amp;site=www.qegoo.cn&amp;menu=yes')" alt="" title="1877550456"><a href="#">询价</a></div>
+                    </td>
+                </tr>
+              

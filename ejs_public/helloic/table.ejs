@@ -1,0 +1,50 @@
+ <table class="table  table-condensed table-striped">
+          <tr>
+                    <td colspan="14">
+
+                        <div class="part-header">
+                            <div class="media"> 
+                                <div class="media-body">
+                                    <div  >
+                                        <div  >
+                                          <a   href="<%=items.item.manufacturer.homepage_url%>" target="_black"  rel="nofellow" ><%=items.item.manufacturer.name%></a> 
+                                        </div>
+                                        <div  >
+                                            <a  href="search?k=<%=items.item.mpn%>"><%=items.item.mpn%></a>
+                                        </div>
+                                    </div> 
+                                    <div class="PartHeader__description"> 
+                                       <%=items.snippet%>  
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div> 
+                    </td>
+                </tr>
+                <tr>
+                    <td width="1%">#</td>
+                    <td width="12%">供应商</td>
+                    <td width="13%">供应商编号</td>
+                    <td width="6%">货期</td>
+                    <td width="6%">库存</td>
+                    <td width="6%">起订量</td>
+                    <td width="8%">包装</td> 
+                    <td width="4%">发货地</td> 
+                    <td width="3%"></td>
+                    <td width="8%">1+</td>
+                    <td width="8%">100+</td>
+                    <td width="8%">1000+</td>
+                    <td width="8%">10000+</td>
+                    <td width="10%"> </td>
+                </tr>   <%
+               var offers =items.item.offers;
+		for (var i = offers.length - 1; i >= 0; i--) {
+			var tr=offers[i]
+	%>
+		<%include tr.ejs%>
+	<%
+};
+               %>
+  				
+                      </tbody>
+        </table> 

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>qegoo</title>
+    <%include head.ejs%>  
+</head>
+
+<body>
+    <%include top.ejs%>  
+    <div class="clearfix"></div>
+    <div class="container-fluid" style="width:60%">
+        <div class="row ">
+            <img src="images/index_logo.gif" class="center" style="margin-bottom: 20px;" />
+            <div class="row">
+                <div class="col-lg-12">
+                     <form action="search" method="get">
+                        <div class="input-group">
+                        <input class="form-control input-lg" aria-label="请输入料号或者属性进行分析" type="text" placeholder="请输入料号或者属性进行分析" name="k">
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-primary btn-lg " style="font-size: 19px;">搜 索</button>
+                            <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style="font-size: 19px;">
+                                <span class="caret"></span>
+                                <span class="sr-only">qegoo更多的搜索功能</span>
+                            </button>
+                               <%include moresearch.ejs%>
+
+                        </div>
+                    </div>
+                   </form>
+                    <span id="helpBlock" class="help-block">请尝试搜索:<a href="search?k=MC33178DMR2G">MC33178DMR2G</a></span>
+                </div>
+            </div> 
+            <div class="row cataloga center"> 
+                <div class="col-md-12 "><script type="text/javascript">BAIDU_CLB_SLOT_ID ="1107032";</script>
+<script type="text/javascript" src="http://cbjs.baidu.com/js/m.js"></script>
+                </div>
+                <!-- <div class=" col-md-3">
+                    <a href="#" class="">
+                        <h2>半导体产品</h2>
+                    </a>
+                </div>
+                  <div class=" col-md-3">
+                    <a href="#" class="">
+                        <h2>半导体产品</h2>
+                    </a>
+                </div>
+                  <div class=" col-md-3">
+                    <a href="#" class="">
+                        <h2>    办公设备和配件</h2>
+                    </a>
+                </div>
+                  <div class=" col-md-3">
+                    <a href="#" class="">
+                        <h2> 工业控制和量表</h2>
+                    </a>
+                </div>
+                  <div class=" col-md-3">
+                    <a href="#" class="">
+                        <h2>工具和用品</h2>
+                    </a>
+                </div> <div class=" col-md-3">
+                    <a href="#" class="">
+                        <h2>工具和用品</h2>
+                    </a>
+                </div> <div class=" col-md-3">
+                    <a href="#" class="">
+                        <h2>工具和用品</h2>
+                    </a>
+                </div> <div class=" col-md-3">
+                    <a href="#" class="">
+                        <h2>工具和用品</h2>
+                    </a>
+                </div> <div class=" col-md-3">
+                    <a href="#" class="">
+                        <h2>工具和用品</h2>
+                    </a>
+                </div> <div class=" col-md-3">
+                    <a href="#" class="">
+                        <h2>工具和用品</h2>
+                    </a>
+                </div> <div class=" col-md-3">
+                    <a href="#" class="">
+                        <h2>工具和用品</h2>
+                    </a>
+                </div> <div class=" col-md-3">
+                    <a href="#" class="">
+                        <h2>工具和用品</h2>
+                    </a>
+                </div> -->
+            </div> 
+        </div> 
+    </div>
+    <div class="clearfix"></div>
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid" style="padding-top: 10px;">
+            © 快易购 粤ICP备13003228号-1
+        </div>
+    </nav>
+
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.slimscroll.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
